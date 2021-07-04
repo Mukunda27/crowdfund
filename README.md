@@ -43,7 +43,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Mukunda27/crowdfund.git)
+- Solution URL: [https://github.com/Mukunda27/crowdfund.git]
 - Live Site URL: [Add live site URL here](https://crowdfund-mukunda.netlify.app)
 
 ## My process
