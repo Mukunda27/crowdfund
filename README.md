@@ -44,7 +44,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/Mukunda27/crowdfund.git]
-- Live Site URL: [Add live site URL here](https://crowdfund-mukunda.netlify.app)
+- Live Site URL: [https://crowdfund-mukunda.netlify.app]
 
 ## My process
 
@@ -58,7 +58,7 @@ Users should be able to:
 - [React](https://reactjs.org/) - JS library
 - [SCSS](https://sass-lang.com/) - CSS preprocessor
 - CSS Modules - For styles
-- [Redux](https://redux.js.org/) = For state management
+- [Redux](https://redux.js.org/) - For state management
 - [React Hooks](https://reactjs.org/docs/getting-started.html) - For building modular components
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
