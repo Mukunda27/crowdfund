@@ -1,0 +1,80 @@
+@import "../../styles/variables";
+
+.header {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  position: absolute;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: white;
+}
+
+.navLink {
+  text-decoration: none;
+  padding: 1rem;
+  color: black;
+  font-size: 1rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $primary-color;
+    margin-right: 1rem;
+  }
+}
+
+.horizontalNavlinks {
+  display: none;
+}
+
+.verticalNavlinks {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  width: 90%;
+  left: 5%;
+  background-color: white;
+  border-radius: 4px;
+  padding: 1rem;
+  z-index: 90;
+}
+
+.hamburger,
+.close {
+  display: inline-block;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 568px) {
+  .horizontalNavlinks {
+    display: flex;
+    width: auto;
+    border: none;
+  }
+
+  .verticalNavlinks {
+    display: none;
+  }
+
+  .navLink {
+    padding: 0 1rem;
+    color: white;
+    &:not(:last-child) {
+      border-bottom: none;
+    }
+  }
+
+  .hamburger,
+  .close {
+    display: none;
+  }
+}

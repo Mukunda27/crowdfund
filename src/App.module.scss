@@ -1,0 +1,15 @@
+@import "./styles/variables";
+
+.app {
+  min-height: 100vh;
+  position: relative;
+  background-color: #eee;
+  padding-bottom: 50px;
+}
+
+.hero {
+  background: url("./assets/image-hero-desktop.jpg");
+  height: 50vh;
+  background-size: cover;
+  background-position: center center;
+}

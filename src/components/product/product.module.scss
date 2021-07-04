@@ -1,0 +1,91 @@
+@import "../../styles/variables";
+
+.productContainer {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.productName {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  color: $text-black;
+  text-align: center;
+}
+
+.productDesc {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+  text-align: center;
+  color: $text-grey;
+}
+
+.productOptions {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+.productBookmark {
+  cursor: pointer;
+  border-radius: 1.75rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+
+  &:active,
+  &:hover {
+    border: none;
+    outline: none;
+  }
+}
+
+.bookmarkIcon {
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: $text-grey;
+}
+
+.bookmarkText {
+  color: black;
+  margin: 0 1rem;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .productContainer {
+    width: 75%;
+  }
+
+  .bookmarkText {
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .productContainer {
+    width: 50%;
+  }
+
+  .bookmarkText {
+    display: initial;
+  }
+}

@@ -1,0 +1,171 @@
+@import "../../styles/variables";
+
+.selectionModal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.modalTitle {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.modalSubTitle {
+  font-size: 0.8rem;
+  color: $text-grey;
+  margin-bottom: 1rem;
+}
+
+.selectionItem {
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+
+  grid-template-areas:
+    "selectionRadio itemTitle"
+    "pledge pledge"
+    "description description"
+    "remaining remaining"
+    "confirmation confirmation";
+}
+
+.selectionRadio {
+  align-self: center;
+  grid-area: selectionRadio;
+}
+
+.itemTitle {
+  grid-area: itemTitle;
+  padding: 0.25rem 1rem;
+  font-weight: 700;
+  justify-self: start;
+}
+
+.pledge {
+  grid-area: pledge;
+  padding: 0.25rem 0;
+  color: $primary-color-dark;
+  justify-self: start;
+}
+
+.remaining {
+  grid-area: remaining;
+  padding: 0.5rem 0;
+  justify-self: start;
+}
+
+.description {
+  margin-top: 0.75rem;
+  grid-area: description;
+  justify-self: start;
+}
+
+.selectionConfirmation {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  grid-area: confirmation;
+  border-top: 1px solid #eee;
+  display: flex;
+  column-gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pledgeSelection {
+  flex-basis: 100%;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.selectedPledge {
+  flex-basis: auto;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid $primary-color-dark;
+}
+
+.confirmPledge {
+  flex-basis: auto;
+}
+
+.selectionRadio {
+  display: inline-block;
+  position: relative;
+}
+
+.selectionRadio input[type="radio"] {
+  display: none;
+}
+
+.selectionRadio label {
+  width: 1rem;
+  height: 1rem;
+  padding: 0 1rem 0 0;
+}
+
+.selectionRadio label:before {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 10px;
+  border: 2px solid $primary-color-dark;
+  background-color: transparent;
+}
+
+.selectionRadio input[type="radio"]:checked + label:after {
+  border-radius: 8px;
+  width: 0.75rem;
+  height: 0.75rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: " ";
+  transform: translate(-35%, -45%);
+  background: $primary-color-dark;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (min-width: 768px) {
+  .selectionItem {
+    grid-template-columns: auto 2fr 2fr 1fr;
+    grid-template-rows: auto;
+
+    grid-template-areas:
+      "selectionRadio itemTitle pledge remaining"
+      "description description description description"
+      "confirmation confirmation confirmation confirmation";
+  }
+
+  .pledgeSelection {
+    flex-basis: 50%;
+    margin-bottom: 0;
+  }
+
+  .remaining {
+    padding: 0.25rem 0;
+    justify-self: end;
+  }
+}

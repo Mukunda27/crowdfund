@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/header/header";
+import Product from "./components/product/product";
+import ProductBacking from "./components/product-backing/product-backing";
+import ProductDescription from "./components/product-description/product-description";
+import SuccessModal from "./components/success-modal/success-modal";
+
+import { useSelector } from "react-redux";
+
+import styles from "./App.module.scss";
+import SelectionModal from "./components/selection-modal/selection-modal";
 
 function App() {
+  const modalInfo = useSelector((state) => state.modal);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.app}>
+      {modalInfo.showSuccessModal && <SuccessModal />}
+      {modalInfo.showSelectionModal && <SelectionModal />}
+      <Header />
+      <div className={styles.hero}></div>
+      <Product transformY={48} />
+      <ProductBacking />
+      <ProductDescription />
     </div>
   );
 }

@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Frontend Mentor - Crowdfunding product page solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Crowdfunding product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/crowdfunding-product-page-7uvcZe7ZR). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
 
-### `yarn start`
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Author](#author)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-### `yarn test`
+## Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### The challenge
 
-### `yarn build`
+Users should be able to:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- View the optimal layout depending on their device's screen size
+- See hover states for interactive elements
+- Make a selection of which pledge to make
+- See an updated progress bar and total money raised based on their pledge total after confirming a pledge
+- See the number of total backers increment by one after confirming a pledge
+- Toggle whether or not the product is bookmarked
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Screenshot
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![](./screenshots/Screenshot_Crowdfund_1.png)
+![](./screenshots/Screenshot_Crowdfund_2.png)
+![](./screenshots/Screenshot_Crowdfund_3.png)
+![](./screenshots/Screenshot_Crowdfund_4.png)
+![](./screenshots/Screenshot_Crowdfund_5.png)
+![](./screenshots/Screenshot_Crowdfund_6.png)
+![](./screenshots/Screenshot_Crowdfund_7.png)
 
-### `yarn eject`
+### Links
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Solution URL: [Add solution URL here](https://github.com/Mukunda27/crowdfund.git)
+- Live Site URL: [Add live site URL here](https://crowdfund-mukunda.netlify.app)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## My process
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Built with
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [SCSS](https://sass-lang.com/) - CSS preprocessor
+- CSS Modules - For styles
+- [Redux](https://redux.js.org/) = For state management
+- [React Hooks](https://reactjs.org/docs/getting-started.html) - For building modular components
 
-## Learn More
+**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### What I learned
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-### Code Splitting
+To see how you can add code snippets, see below:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```html
+<h1>Some HTML code I'm proud of</h1>
+```
 
-### Analyzing the Bundle Size
+```css
+.proud-of-this-css {
+  color: papayawhip;
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```js
+const proudOfThisFunc = () => {
+  console.log("🎉");
+};
+```
 
-### Making a Progressive Web App
+### Continued development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-### Advanced Configuration
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Name - [Mukunda]
+- Frontend Mentor - [@Mukunda27](https://www.frontendmentor.io/profile/Mukunda27)

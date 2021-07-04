@@ -1,0 +1,41 @@
+@import "../../styles/variables";
+
+.itemContainer {
+  margin: 2rem 0;
+  padding: 2rem;
+  border: 1px solid $primary-color;
+  border-radius: 4px;
+}
+
+.itemHeader,
+.itemFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.itemFooter {
+  margin-bottom: 0;
+}
+
+.itemName,
+.remaining {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.pledge {
+  color: $primary-color;
+  margin-left: 1rem;
+}
+
+.itemBody {
+  font-size: 0.9rem;
+  color: $text-grey;
+  margin-bottom: 1.5rem;
+}
+
+.disabled {
+  color: $text-grey;
+}
