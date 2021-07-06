@@ -41,29 +41,6 @@
   color: $text-grey;
 }
 
-.backingAmtIndicator {
-  width: 100%;
-  margin: 0 auto;
-  background-color: $text-grey;
-  border-radius: 16px;
-  height: 10px;
-  position: relative;
-  margin-bottom: 1rem;
-
-  &::after {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    width: 90%;
-    height: 100%;
-    background-color: $primary-color;
-    border-radius: 16px;
-
-    z-index: 99;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .productContainer {
     width: 75%;

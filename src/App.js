@@ -15,7 +15,9 @@ function App() {
   return (
     <div className={styles.app}>
       {modalInfo.showSuccessModal && <SuccessModal />}
-      {modalInfo.showSelectionModal && <SelectionModal />}
+      {modalInfo.showSelectionModal && (
+        <SelectionModal defaultReward={modalInfo.defaultReward} />
+      )}
       <Header />
       <div className={styles.hero}></div>
       <Product transformY={48} />

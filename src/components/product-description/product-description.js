@@ -1,11 +1,14 @@
 import React from "react";
 import ProductItem from "../product-item/product-item";
+import { useSelector } from "react-redux";
 
 import styles from "./product-description.module.scss";
 
-import items from "../../item-details";
-
 function ProductDescription() {
+  const items = useSelector((state) => state.products).filter(
+    (item) => item.pledgeAmount
+  );
+
   return (
     <div className={styles.productContainer}>
       <div className={styles.aboutTitle}>About this project</div>

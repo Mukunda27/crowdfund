@@ -22,11 +22,16 @@ function Product(props) {
   const bookmarkText = bookmarked ? "Bookmarked" : "Bookmark";
 
   function bookmarkProduct() {
-    setBookmark(true);
+    setBookmark((state) => !state);
   }
 
   const backProject = () => {
-    dispatch(setSelecctionModalState({ modalState: true, accepted: false }));
+    dispatch(
+      setSelecctionModalState({
+        modalState: true,
+        accepted: false,
+      })
+    );
   };
 
   return (

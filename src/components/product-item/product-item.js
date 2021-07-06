@@ -3,14 +3,20 @@ import Button from "../button/button";
 import styles from "./product-item.module.scss";
 
 import { useDispatch } from "react-redux";
-import { setSuccessModalState } from "../../redux/modalSlice";
+import { setSelecctionModalState } from "../../redux/modalSlice";
 
 function ProductItem({ item }) {
   const dispatch = useDispatch();
   const disabled = item.remaining <= 0 ? { color: "hsl(0, 0%, 48%)" } : {};
 
-  const displaySuccessModal = () => {
-    dispatch(setSuccessModalState(true));
+  const displaySelectionModal = () => {
+    dispatch(
+      setSelecctionModalState({
+        modalState: true,
+        accepted: false,
+        rewardId: item.id,
+      })
+    );
   };
 
   return (
@@ -28,7 +34,7 @@ function ProductItem({ item }) {
         <span style={disabled} className={styles.itemsRem}>
           <strong className={styles.remaining}>{item.remaining} </strong> left
         </span>
-        <Button clicked={displaySuccessModal} disabled={item.remaining <= 0}>
+        <Button clicked={displaySelectionModal} disabled={item.remaining <= 0}>
           Select Reward
         </Button>
       </div>

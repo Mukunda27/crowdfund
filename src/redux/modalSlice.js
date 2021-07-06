@@ -5,6 +5,7 @@ export const modalSlice = createSlice({
   initialState: {
     showSuccessModal: false,
     showSelectionModal: false,
+    defaultReward: null,
   },
   reducers: {
     setSuccessModalState: (state, action) => {
@@ -15,6 +16,7 @@ export const modalSlice = createSlice({
       if (action.payload.accepted) {
         state.showSuccessModal = true;
       }
+      state.defaultReward = action.payload.rewardId;
     },
   },
 });
