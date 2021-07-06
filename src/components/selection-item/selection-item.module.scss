@@ -109,14 +109,14 @@
 }
 
 .selectionRadio input[type="radio"]:checked + label:after {
-  border-radius: 8px;
+  border-radius: 10px;
   width: 0.75rem;
   height: 0.75rem;
   position: absolute;
   top: 50%;
   left: 50%;
   content: " ";
-  transform: translate(-35%, -45%);
+  transform: translate(-30%, -50%);
   background: $primary-color-dark;
 }
 

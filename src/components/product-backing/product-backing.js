@@ -13,14 +13,16 @@ function ProductBacking() {
         <div className={styles.backingDetail}>
           <span
             className={styles.detailHeading}
-          >{`\u0024 ${backingInfo.backedAmt}`}</span>
+          >{`\u0024 ${backingInfo.backedAmt.toLocaleString("en-US")}`}</span>
           <span
             className={styles.detailSubHeading}
-          >{`of \u0024 ${backingInfo.total} backed`}</span>
+          >{`of \u0024 ${backingInfo.total.toLocaleString(
+            "en-US"
+          )} backed`}</span>
         </div>
         <div className={styles.backingDetail}>
           <span className={styles.detailHeading}>
-            {`${backingInfo.numberOfBackers}`}
+            {`${backingInfo.numberOfBackers.toLocaleString("en-US")}`}
           </span>
           <span className={styles.detailSubHeading}>total backers</span>
         </div>
