@@ -9,7 +9,9 @@ import { selectReward } from "../../redux/productsSlice";
 import styles from "./selection-item.module.scss";
 
 function SelectionItem({ item, selected, itemSelected }) {
-  const [pledgedAmt, setPledgedAmt] = useState("");
+  const defaultPledge = item.pledgeAmount || 0;
+
+  const [pledgedAmt, setPledgedAmt] = useState(defaultPledge.toString());
   const dispatch = useDispatch();
 
   const disableConfirmButton = pledgedAmt
@@ -24,8 +26,6 @@ function SelectionItem({ item, selected, itemSelected }) {
     item.remaining <= 0
       ? { color: "hsl(0, 0%, 48%)", pointerEvents: "none" }
       : {};
-
-  const amt = pledgedAmt ? pledgedAmt : 0;
 
   const selectedBorder = selected
     ? {
@@ -76,14 +76,19 @@ function SelectionItem({ item, selected, itemSelected }) {
       <span className={styles.description}> {item.description} </span>
       {selected && (
         <div className={styles.selectionConfirmation}>
-          <input
-            type="number"
-            onChange={pledgeAmtEnChanged}
-            placeholder="Enter pledge amount"
-            className={styles.pledgeSelection}
-            value={pledgedAmt}
-          />
-          <span className={styles.selectedPledge}>{`\u0024 ${amt}`}</span>
+          <span className={styles.pledgeSelection} value={pledgedAmt}>
+            Enter pledge amount
+          </span>
+          <span className={styles.selectedPledge}>
+            {`\u0024`}
+            <input
+              type="number"
+              placeholder="Amount"
+              onChange={pledgeAmtEnChanged}
+              className={styles.pledgeInput}
+              value={pledgedAmt}
+            />
+          </span>
           <Button
             disabled={disableConfirmButton}
             clicked={confirmSelection}

@@ -2,7 +2,7 @@
 
 .selectionItem {
   margin: 1rem 0;
-  padding: 1rem 2rem;
+  padding: 1rem 0.9rem;
   border: 1px solid #eee;
   border-radius: 4px;
 
@@ -63,17 +63,21 @@
 
 .pledgeSelection {
   flex-basis: 100%;
-  outline: none;
-  border: none;
-  font-size: 1.1rem;
   margin-bottom: 1rem;
 }
 
 .selectedPledge {
   flex-basis: auto;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 1rem;
   border-radius: 1.5rem;
   border: 1px solid $primary-color-dark;
+}
+
+.pledgeInput {
+  width: 3rem;
+  outline: none;
+  border: none;
+  margin-left: 0.5rem;
 }
 
 .confirmPledge {
@@ -133,6 +137,7 @@ input[type="number"] {
 
 @media screen and (min-width: 768px) {
   .selectionItem {
+    padding: 1rem 2rem;
     grid-template-columns: auto 2fr 2fr 1fr;
     grid-template-rows: auto;
 
@@ -143,8 +148,12 @@ input[type="number"] {
   }
 
   .pledgeSelection {
-    flex-basis: 50%;
+    flex-basis: auto;
     margin-bottom: 0;
+  }
+
+  .pledgeInput {
+    width: 4rem;
   }
 
   .remaining {
